@@ -30,13 +30,15 @@ These columns are: YEAR, MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME
 - DURATION: This is the time, represented as minutes, that the power outage lasted
 - POPULATION: This is the population of the U.S. state that the power outage was located in. 
 - POPPCT_URBAN: The percentage of residents in that state that are URBAN. The inverse of this statistic is the amount of people that are rural.
+- POPDEN_URBAN: The density of those living within urban areas.
+- POPDEN_RURAL: The density of those living within rural areas.
  
 ## Cleaning and EDA
 
 ### Data Cleaning
 
 #### Data Cleaing Steps
-
+We did our initial dataframe analysis in Excel, where we identified columns that might be helpful to answering our question. Then, we downloaded the file as a .csv and added the .csv file to DataLore, where we performed more data cleaning. The first thing we did was get rid of the strings that descirbed the dataset, such as the title. We then set the columns of DataFrame and selected the ones we planned on using in our analysis. Then, we fixed some of the datatypes and calculated the length of the outages by turning OUTAGE.START and OUTAGE.END into datetime objects. We then calculated the length of the outages and turned it into minutes to be similar to the OUTAGE.DUARTION column that was provided to us.
 #### Head of Cleaned DataFrame
 
 ### Univariate Analysis
@@ -44,16 +46,21 @@ These columns are: YEAR, MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME
 #### Plot Showing Distribution of Single Column
 
 #### Description of Plot
-
+This density histogram shows the distribution for the urban population percentages within the dataset. This histogram reveals that most of the power outages take place in areas with a population that is about 80-95 percent urban. 
 
 ### Bivariate Analysis
 
 #### Plot Showing Relationship Between Two Columns
 
 #### Interpert Plot
-
+This plot is used to compare the data in the OUTAGE.DURATION and OUTAGE.LENGTH column and reveals that they are nearly identical. We plotted this relationship to ensure that we accurated calculated the length of the power outages since answering our question accurately depends on this value. 
 ### Interesting Aggregates
 
+#### Grouped Table / Pivot Table
+
+####  Pivot Table Interpretation
+This table reveals that there is a large amount of variation between different months regarding the length of
+the power outage.
 
 ## Assessment of Missingnes
 
@@ -74,9 +81,18 @@ These columns are: YEAR, MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME
 ## Hypothesis Testing
 
 ### Hypothesis Testing
-
+We are performing a Permutation Test-> Is the duration of power outages in rural areas equal to the duration of power outages in urban areas.
 #### State Null and Alternative Hypotheses
+
+#### Null Hypotheses: Whether or not the power outage occurred in a rural or urban area is not related to the duration of the power outage and any difference in this is due to chance.
+
+#### Alternative Hypothesis: Whether or not the power outage occurred in a rural or urban area is related to the duration of the power outage and power outages in urban areas do last longer. 
+
 
 #### Choice of Test Statistic
 
+Our test statistic is the difference in means of the duration of the power outage between rural and urban outages.
+
 #### P Value and Conclusion
+
+We selected our p-value to be 0.05 since this is considered the industry standard. Since our p_value was much lower than our cutoff, we believe that there is an arguement to reject the null hypothesis. 
