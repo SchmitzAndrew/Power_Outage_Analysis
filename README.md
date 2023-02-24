@@ -33,7 +33,50 @@ These columns are: YEAR, MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME
  
 ## Cleaning and EDA
 
+### Data Cleaning
+
+#### Data Cleaing Steps
+
+#### Head of Cleaned DataFrame
+
+### Univariate Analysis
+
+#### Plot Showing Distribution of Single Column
+
+#### Description of Plot
+
+
+### Bivariate Analysis
+
+#### Plot Showing Relationship Between Two Columns
+
+#### Interpert Plot
+
+### Interesting Aggregates
+
 
 ## Assessment of Missingnes
 
+### NMAR Analysis
+
+#### State Whether There Is A Column That Is NMAR
+
+#### Results of Missingness Permutation Tests With Respect To Data
+
+#### Plot Related To Missingness Exploration
+
+### Missingness Dependency
+
+#### Present and Interperet Results of Missingness Permutation Tests
+
+##### Embed Plot Related to Missingness
+
 ## Hypothesis Testing
+
+### Hypothesis Testing
+
+#### State Null and Alternative Hypotheses
+
+#### Choice of Test Statistic
+
+#### P Value and Conclusion
