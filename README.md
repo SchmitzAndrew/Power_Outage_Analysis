@@ -24,7 +24,7 @@ These columns are: YEAR, MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME
 - MONTH: The month the outage took place
 - U.S. State: This is the state (contintental) took place
 - START.DATE: This is the date that the outage took place
-- STATE.TIME: This is the time that the power outage began
+- START.TIME: This is the time that the power outage began
 - RESTORATION.DATE: This is the date that the power was turned back on and the outage ended
 - RESTORATION.TIME: This is the time in the day that the power was turned back on
 - DURATION: This is the time, represented as minutes, that the power outage lasted
@@ -32,6 +32,9 @@ These columns are: YEAR, MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME
 - POPPCT_URBAN: The percentage of residents in that state that are URBAN. The inverse of this statistic is the amount of people that are rural.
 - POPDEN_URBAN: The density of those living within urban areas.
 - POPDEN_RURAL: The density of those living within rural areas.
+- START: The combined column of pd.Timestamp type from START.DATE and START.TIME
+- RESTORATION: The combined column of pd.Timestamp type from RESTORATION.DATE and RESTORATION.TIME
+- LENGTH: The total time difference of RESTORATION - START
  
 ## Cleaning and EDA
 
