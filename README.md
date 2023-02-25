@@ -59,6 +59,9 @@ We did our initial dataframe analysis in Excel, where we identified columns that
 #### Description of Plot
 This histogram shows the distirbution of outages in our dataset. We can see that the majority of outages are very short, and there some enourmous outliers. We decided to remove the outliers:
 <iframe src='assets/outage-duration-no-outliers-histogram.html' width = 800 height = 600 frameBorder=0></iframe>
+
+###### X: OUTAGE_DURATION
+
 After removing the outliers that are outside 2 standard deviations, we can see that not much of a difference was made to the overall distribution of outage durations. Therefore, we chose to continue using the duration with outliers since it these large outliers might still help us answer our question if they are evidence of slow repsonse times in rural areas.
 ### Bivariate Analysis
 
