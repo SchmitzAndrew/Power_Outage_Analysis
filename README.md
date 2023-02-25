@@ -65,8 +65,10 @@ This plot is used to compare the data in the OUTAGE.DURATION and OUTAGE.LENGTH c
 ### Interesting Aggregates
 
 #### Grouped Table / Pivot Table
-| urban   |   OUTAGE.DURATION |\n|:--------|------------------:|\n| Rural   |              1219 | 
-Urban   |               480 |
+| urban   |   OUTAGE.DURATION |
+|:--------|------------------:|
+| Rural   |              1219 |
+| Urban   |               480 |
 
 ####  Pivot Table Interpretation
 This table has signifigant importance since it shows that power outages that occur in urban areas have a median value that is much higher than ones that occur in predominantely rural areas. We still need to run a hypothesis test to determine if this is due to random chance or not. 
