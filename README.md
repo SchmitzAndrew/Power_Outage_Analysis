@@ -92,6 +92,10 @@ This table reveals that there is a large amount of variation between different m
 
 #### State Whether There Is A Column That Is NMAR
 
+A column that may be NMAR is the 'CAUSE.CATEGORY.DETAIL' column, because this column is meant to give a detailed account regarding the cause of the power outage. The reason why this column is NMAR is because the NA entries may be due to negligence and laziness from the worker at hand during the outage. The worker's work ethic isn't measured in any other category/observed data but rather in unobserved data (work ethic/propensity to not follow protocol).The data isn't MAR or MD either because we can't predict the missingness based on any of the observed data we're collecting. It could be MCAR depending on how we frame it as we can either see the missingness as a result of negligence (NMAR) or we can see it as a result of system failure (MCAR) that wiped out results randomly. In our case, we are claiming negligence/laziness so that's NMAR. Some data that could help would be a column of prior history of successfully completed detailed reports of cause. This might possibly help predict and explain future missing data for the 'CAUSE.CATEGORY.DETAIL' column.
+
+
+
 #### Results of Missingness Permutation Tests With Respect To Data
 
 #### Plot Related To Missingness Exploration
