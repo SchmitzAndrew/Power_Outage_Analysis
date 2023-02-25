@@ -40,6 +40,7 @@ These columns are: YEAR, MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME
 #### Data Cleaing Steps
 We did our initial dataframe analysis in Excel, where we identified columns that might be helpful to answering our question. Then, we downloaded the file as a .csv and added the .csv file to DataLore, where we performed more data cleaning. The first thing we did was get rid of the strings that descirbed the dataset, such as the title. We then set the columns of DataFrame and selected the ones we planned on using in our analysis. Then, we fixed some of the datatypes and calculated the length of the outages by turning OUTAGE.START and OUTAGE.END into datetime objects. We then calculated the length of the outages and turned it into minutes to be similar to the OUTAGE.DUARTION column that was provided to us.
 #### Head of Cleaned DataFrame
+
 |   YEAR |   MONTH | U.S._STATE   | OUTAGE.START.DATE         | OUTAGE.START.TIME   | OUTAGE.RESTORATION.DATE    | OUTAGE.RESTORATION.TIME   |   OUTAGE.DURATION |   POPULATION |   POPPCT_URBAN |   POPDEN_URBAN |   POPDEN_RURAL | OUTAGE.START        | OUTAGE.RESTORATION   |   OUTAGE.LENGTH | urban   |
 |-------:|--------:|:-------------|:--------------------------|:--------------------|:---------------------------|:--------------------------|------------------:|-------------:|---------------:|---------------:|---------------:|:--------------------|:---------------------|----------------:|:--------|
 |   2011 |       7 | Minnesota    | Friday, July 01, 2011     | 5:00:00 PM          | Sunday, July 03, 2011      | 8:00:00 PM                |              3060 |      5348119 |          73.27 |           2279 |           18.2 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00  |            3060 | Rural   |
@@ -47,6 +48,7 @@ We did our initial dataframe analysis in Excel, where we identified columns that
 |   2010 |      10 | Minnesota    | Tuesday, October 26, 2010 | 8:00:00 PM          | Thursday, October 28, 2010 | 10:00:00 PM               |              3000 |      5310903 |          73.27 |           2279 |           18.2 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00  |            3000 | Rural   |
 |   2012 |       6 | Minnesota    | Tuesday, June 19, 2012    | 4:30:00 AM          | Wednesday, June 20, 2012   | 11:00:00 PM               |              2550 |      5380443 |          73.27 |           2279 |           18.2 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00  |            2550 | Rural   |
 |   2015 |       7 | Minnesota    | Saturday, July 18, 2015   | 2:00:00 AM          | Sunday, July 19, 2015      | 7:00:00 AM                |              1740 |      5489594 |          73.27 |           2279 |           18.2 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |            1740 | Rural   |
+
 ### Univariate Analysis
 
 #### Plot Showing Distribution of Single Column
@@ -65,6 +67,7 @@ This plot is used to compare the data in the OUTAGE.DURATION and OUTAGE.LENGTH c
 ### Interesting Aggregates
 
 #### Grouped Table / Pivot Table
+
 | urban   |   OUTAGE.DURATION |
 |:--------|------------------:|
 | Rural   |              1219 |
@@ -74,6 +77,7 @@ This plot is used to compare the data in the OUTAGE.DURATION and OUTAGE.LENGTH c
 This table has signifigant importance since it shows that power outages that occur in urban areas have a median value that is much higher than ones that occur in predominantely rural areas. We still need to run a hypothesis test to determine if this is due to random chance or not. 
 
 #### Grouped Table / Pivot Table
+
 | urban   |    1.0 |    2.0 |   3.0 |    4.0 |    5.0 |   6.0 |   7.0 |   8.0 |   9.0 |   10.0 |   11.0 |   12.0 |
 |:--------|-------:|-------:|------:|-------:|-------:|------:|------:|------:|------:|-------:|-------:|-------:|
 | Rural   | 1920   | 1181   |   251 | 1219   | 1260.5 | 547.5 | 960   |  1381 |  1528 |  833.5 |   2363 |   1898 |
