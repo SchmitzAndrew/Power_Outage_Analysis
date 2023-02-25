@@ -95,17 +95,22 @@ This table reveals that there is a large amount of variation between different m
 A column that may be NMAR is the 'CAUSE.CATEGORY.DETAIL' column, because this column is meant to give a detailed account regarding the cause of the power outage. The reason why this column is NMAR is because the NA entries may be due to negligence and laziness from the worker at hand during the outage. The worker's work ethic isn't measured in any other category/observed data but rather in unobserved data (work ethic/propensity to not follow protocol).The data isn't MAR or MD either because we can't predict the missingness based on any of the observed data we're collecting. It could be MCAR depending on how we frame it as we can either see the missingness as a result of negligence (NMAR) or we can see it as a result of system failure (MCAR) that wiped out results randomly. In our case, we are claiming negligence/laziness so that's NMAR. Some data that could help would be a column of prior history of successfully completed detailed reports of cause. This might possibly help predict and explain future missing data for the 'CAUSE.CATEGORY.DETAIL' column.
 
 
-
 #### Results of Missingness Permutation Tests With Respect To Data
 
 #### Plot Related To Missingness 
-
-<iframe src='assets/kdeplot.html' width = 800 height = 600 frameBorder=0></iframe>
-
+<iframe src='kdeplot.html' width = 800 height = 600 frameBorder=0></iframe>
 ### Missingness Dependency
 
 #### Present and Interperet Results of Missingness Permutation Tests
+**Column selected: OUTAGE.DURATION
 
+**Columns that selected doesn't depend on: POPULATION
+
+First, we plotted the above plot with the population means when duration is missing vs not missing to see if the means had a similar shape and after we determined they were pretty close, we used a ks statistic test instead of a differences in means test. After running a ks-statistic test on 'OUTAGE.DURATION' and 'POPULATION' we got a p_value of 0.35, which is greater than our significance level of 0.05, so we fail to reject our null hypothesis that the distribution of population with duration missing is not the same as the distribution of population when duration is not missing.
+
+**Columns that selected does depend on: POPDEN.RURAL
+
+We plotted the means of POPDEN.RURAL when outage duration was missng vs not missing and decided we needed to run a ks-statistic test. After running a ks-statistic test on 'OUTAGE.DURATION' and 'POPDEN.RURAL' we got a p_value of 0.001103256120996406, which is less than our significance level of 0.05, so we are able to reject our null hypothesis that the distribution of the 'population density of the rural areas' with duration missing is not the same as the distribution of  the 'population density of the rural areas' when duration is not missing.
 
 ## Hypothesis Testing
 
@@ -127,5 +132,3 @@ Our test statistic is the difference in means of the duration of the power outag
 We selected our p-value to be 0.05 since this is considered the industry standard and precise enough for our experiment. 
 
 Since our p_value was much lower than our cutoff, we believe that there is an arguement to reject the null hypothesis. This leads us to believe that power outages in rural areas might last longer. However, we are not able to make a surefire statement since we are just performing statistical tests.
-
-This finding gives insight to how we might need to prioritize outage relief efforts in rural areas, or that rural outages last longer due to the equipment in rual areas being harder to fix.
