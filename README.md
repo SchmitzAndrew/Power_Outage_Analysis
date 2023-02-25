@@ -91,8 +91,10 @@ We are performing a Permutation Test-> Is the duration of power outages in rural
 
 #### Choice of Test Statistic
 
-Our test statistic is the difference in means of the duration of the power outage between rural and urban outages.
+Our test statistic is the difference in means of the duration of the power outage between rural and urban outages. These accurately reflects the question we are trying to answer since it directly compares the numerical OUTAGE.DURATION columns.
 
 #### P Value and Conclusion
 
-We selected our p-value to be 0.05 since this is considered the industry standard. Since our p_value was much lower than our cutoff, we believe that there is an arguement to reject the null hypothesis. 
+We selected our p-value to be 0.05 since this is considered the industry standard and precise enough for our experiment. 
+
+Since our p_value was much lower than our cutoff, we believe that there is an arguement to reject the null hypothesis. This leads us to believe that power outages in rural areas might last longer. However, we are not able to make a surefire statement since we are just performing statistical tests.
