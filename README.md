@@ -99,7 +99,9 @@ A column that may be NMAR is the 'CAUSE.CATEGORY.DETAIL' column, because this co
 #### Results of Missingness Permutation Tests With Respect To Data
 
 #### Plot Related To Missingness 
-<iframe src='kdeplot.html' width = 800 height = 600 frameBorder=0></iframe>
+
+<iframe src='assets/kdeplot.html' width = 800 height = 600 frameBorder=0></iframe>
+
 ### Missingness Dependency
 
 #### Present and Interperet Results of Missingness Permutation Tests
