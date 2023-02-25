@@ -44,13 +44,15 @@ We did our initial dataframe analysis in Excel, where we identified columns that
 ### Univariate Analysis
 
 #### Plot Showing Distribution of Single Column
-
+<iframe src='assets/outage-duration-histogram.html' width=800 height = 600 frameBorder=0></iframe>
 #### Description of Plot
-This density histogram shows the distribution for the urban population percentages within the dataset. This histogram reveals that most of the power outages take place in areas with a population that is about 80-95 percent urban. 
-
+This histogram shows the distirbution of outages in our dataset. We can see that the majority of outages are very short, and there some enourmous outliers. We decided to remove the outliers:
+<iframe src='assets/outage-duration-no-outliers-histogram.html' width = 800 height = 600 frameBorder=0></iframe>
+After removing the outliers that are outside 2 standard deviations, we can see that not much of a difference was made to the overall distribution of outage durations. Therefore, we chose to continue using the duration with outliers since it these large outliers might still help us answer our question if they are evidence of slow repsonse times in rural areas.
 ### Bivariate Analysis
 
 #### Plot Showing Relationship Between Two Columns
+<iframe src='assets/duration-poppcturban-scatter-plot.html' width = 800 height = 600 frameBorder=0></iframe>
 
 #### Interpert Plot
 This plot is used to compare the data in the OUTAGE.DURATION and OUTAGE.LENGTH column and reveals that they are nearly identical. We plotted this relationship to ensure that we accurated calculated the length of the power outages since answering our question accurately depends on this value. 
