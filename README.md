@@ -135,3 +135,5 @@ Our test statistic is the difference in means of the duration of the power outag
 We selected our p-value to be 0.05 since this is considered the industry standard and precise enough for our experiment. 
 
 Since our p_value was much lower than our cutoff, we believe that there is an arguement to reject the null hypothesis. This leads us to believe that power outages in rural areas might last longer. However, we are not able to make a surefire statement since we are just performing statistical tests.
+
+This result gives us insight into the areas we might want to prioritize with infastructure improvements in the United States. However, there are many other factors that could affect the duration in rural areas, such as difficult to reach equipment. 
